@@ -235,7 +235,7 @@
 						<key>_historyCapacity</key>
 						<integer>10</integer>
 						<key>bookmark</key>
-						<string>03607C5C133923E200B62CA7</string>
+						<string>03607C6313396C1500B62CA7</string>
 						<key>history</key>
 						<array>
 							<string>03424FCC1338D235006D254D</string>
@@ -275,7 +275,7 @@
 						<key>_historyCapacity</key>
 						<integer>10</integer>
 						<key>bookmark</key>
-						<string>03607C5D133923E200B62CA7</string>
+						<string>03607C6413396C1500B62CA7</string>
 						<key>history</key>
 						<array>
 							<string>03424FCD1338D235006D254D</string>
@@ -315,7 +315,7 @@
 						<key>_historyCapacity</key>
 						<integer>10</integer>
 						<key>bookmark</key>
-						<string>03607C5E133923E200B62CA7</string>
+						<string>03607C6513396C1500B62CA7</string>
 						<key>history</key>
 						<array>
 							<string>03424FCE1338D235006D254D</string>
@@ -355,7 +355,7 @@
 						<key>_historyCapacity</key>
 						<integer>10</integer>
 						<key>bookmark</key>
-						<string>03607C5F133923E200B62CA7</string>
+						<string>03607C6613396C1500B62CA7</string>
 						<key>history</key>
 						<array>
 							<string>03424FCF1338D235006D254D</string>
@@ -484,7 +484,7 @@
 							<real>185</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>8 91 1304 787 0 0 1440 878 </string>
+						<string>16 91 1304 787 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -514,7 +514,7 @@
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>03607C5B133923E200B62CA7</string>
+										<string>03607C6213396C1500B62CA7</string>
 										<key>history</key>
 										<array>
 											<string>03424F8F1338D177006D254D</string>
@@ -542,7 +542,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1097, 530}}</string>
 								<key>RubberWindowFrame</key>
-								<string>8 91 1304 787 0 0 1440 878 </string>
+								<string>16 91 1304 787 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -567,7 +567,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1097, 184}}</string>
 										<key>RubberWindowFrame</key>
-										<string>8 91 1304 787 0 0 1440 878 </string>
+										<string>16 91 1304 787 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -826,7 +826,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>322511842.19966698</real>
+	<real>322530325.35211003</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -852,7 +852,7 @@
 		<string>/Users/nst/Projects/MobileSignal/MobileSignal.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>8 91 1304 787 0 0 1440 878 </string>
+	<string>16 91 1304 787 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
