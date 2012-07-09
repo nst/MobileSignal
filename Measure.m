@@ -9,9 +9,6 @@
 #import "Measure.h"
 #import <CoreLocation/CoreLocation.h>
 
-@class UIStatusBarForegroundView;
-@class UIStatusBarDataNetworkItemView;
-
 @implementation Measure
 
 @synthesize networkType;
@@ -19,28 +16,6 @@
 @synthesize networkName;
 @synthesize date;
 @synthesize location;
-
-+ (NSNumber *)dataNetworkTypeFromStatusBar {
-    
-    UIApplication *app = [UIApplication sharedApplication];
-    
-    UIStatusBar *statusBar = [app valueForKey:@"statusBar"];
-    
-    UIStatusBarForegroundView *foregroundView = [statusBar valueForKey:@"foregroundView"];
-    
-    NSArray *subviews = [foregroundView subviews];
-    
-    UIStatusBarDataNetworkItemView *dataNetworkItemView = nil;
-    
-    for (id subview in subviews) {
-        if([subview isKindOfClass:[NSClassFromString(@"UIStatusBarDataNetworkItemView") class]]) {
-            dataNetworkItemView = subview;
-            break;
-        }
-    }
-    
-    return [dataNetworkItemView valueForKey:@"dataNetworkType"];
-}
 
 + (NSString *)stringForNetworkType:(NSUInteger)aNetworkType {
 	if(aNetworkType == 0) return @"GSM";
@@ -72,7 +47,7 @@
     // Since iOS 5, statusBarData->dataNetworkType returns always 0.
     // Therefore, we read in the status bar view to get this value.
     
-    NSUInteger dataNetworkType = [[self dataNetworkTypeFromStatusBar] integerValue];
+    NSUInteger dataNetworkType = [[UIApplication dataNetworkTypeFromStatusBar] integerValue];
 	
     char* serviceString = (char *)statusBarData->serviceString;
 	    

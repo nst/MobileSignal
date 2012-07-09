@@ -30,6 +30,17 @@
 @synthesize mapView;
 @synthesize statusBarServer;
 
+static NSDateFormatter *dateFormatter;
+
+- (NSDateFormatter *)dateFormatter {
+    if(dateFormatter == nil) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-dd-MM HH:mm"];
+    }
+    
+    return dateFormatter;
+}
+
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {    
 	[self dismissModalViewControllerAnimated:YES];
 }
@@ -50,8 +61,11 @@
 	signalStrengthLabel.text = [NSString stringWithFormat:@"%d dBm", m.signalStrength];
 	networkTypeLabel.text = [Measure stringForNetworkType:m.networkType];
 	nbMeasuresLabel.text = [NSString stringWithFormat:@"N=%d", [measures count]];
-	startDateLabel.text = [startDate description];
-	lastDateLabel.text = [m.date description];
+    
+    // TODO: use formatted dates
+    NSDateFormatter *dateFormatter = [self dateFormatter];
+	startDateLabel.text = [dateFormatter stringFromDate:startDate];
+	lastDateLabel.text = [dateFormatter stringFromDate:m.date];
 }
 
 - (void)didReceiveMeasure:(Measure *)m {

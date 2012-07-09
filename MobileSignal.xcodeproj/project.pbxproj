@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		035092BD129BA2B0007EBDAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035092BC129BA2B0007EBDAF /* CoreLocation.framework */; };
 		035092F4129BA8D8007EBDAF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035092F3129BA8D8007EBDAF /* MapKit.framework */; };
+		037E6AE815AB305700833F6B /* UIApplication+MS.m in Sources */ = {isa = PBXBuildFile; fileRef = 037E6AE715AB305700833F6B /* UIApplication+MS.m */; };
 		03C79AD412ABF6430081BD3A /* MSPolylineWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C79AD312ABF6430081BD3A /* MSPolylineWrapper.m */; };
 		03C79B4112ABFB750081BD3A /* UIColor+MS.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C79B4012ABFB750081BD3A /* UIColor+MS.m */; };
 		03C79B7612ABFE6A0081BD3A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C79B7412ABFE6A0081BD3A /* Icon.png */; };
@@ -32,6 +33,8 @@
 		0300AE901298675B00D87CEE /* UIStatusBarServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIStatusBarServer.h; sourceTree = "<group>"; };
 		035092BC129BA2B0007EBDAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		035092F3129BA8D8007EBDAF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		037E6AE615AB305700833F6B /* UIApplication+MS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MS.h"; sourceTree = "<group>"; };
+		037E6AE715AB305700833F6B /* UIApplication+MS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MS.m"; sourceTree = "<group>"; };
 		03C79AD212ABF6430081BD3A /* MSPolylineWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPolylineWrapper.h; sourceTree = "<group>"; };
 		03C79AD312ABF6430081BD3A /* MSPolylineWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPolylineWrapper.m; sourceTree = "<group>"; };
 		03C79B3F12ABFB750081BD3A /* UIColor+MS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MS.h"; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 			children = (
 				1D3623240D0F684500981E51 /* MobileSignalAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MobileSignalAppDelegate.m */,
+				037E6AE615AB305700833F6B /* UIApplication+MS.h */,
+				037E6AE715AB305700833F6B /* UIApplication+MS.m */,
 			);
 			name = "Application Delegate";
 			path = Classes;
@@ -253,6 +258,7 @@
 				03E0DE7012976BDA000D33D3 /* MSChartView.m in Sources */,
 				03C79AD412ABF6430081BD3A /* MSPolylineWrapper.m in Sources */,
 				03C79B4112ABFB750081BD3A /* UIColor+MS.m in Sources */,
+				037E6AE815AB305700833F6B /* UIApplication+MS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
