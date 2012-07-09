@@ -7,8 +7,10 @@
 //
 
 #import "Measure.h"
-#import "UIStatusBarServerThread.h"
 #import <CoreLocation/CoreLocation.h>
+
+@class UIStatusBarForegroundView;
+@class UIStatusBarDataNetworkItemView;
 
 @implementation Measure
 
@@ -18,11 +20,33 @@
 @synthesize date;
 @synthesize location;
 
++ (NSNumber *)dataNetworkTypeFromStatusBar {
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    UIStatusBar *statusBar = [app valueForKey:@"statusBar"];
+    
+    UIStatusBarForegroundView *foregroundView = [statusBar valueForKey:@"foregroundView"];
+    
+    NSArray *subviews = [foregroundView subviews];
+    
+    UIStatusBarDataNetworkItemView *dataNetworkItemView = nil;
+    
+    for (id subview in subviews) {
+        if([subview isKindOfClass:[NSClassFromString(@"UIStatusBarDataNetworkItemView") class]]) {
+            dataNetworkItemView = subview;
+            break;
+        }
+    }
+    
+    return [dataNetworkItemView valueForKey:@"dataNetworkType"];
+}
+
 + (NSString *)stringForNetworkType:(NSUInteger)aNetworkType {
 	if(aNetworkType == 0) return @"GSM";
 	if(aNetworkType == 1) return @"Edge";
 	if(aNetworkType == 2) return @"3G";
-	if(aNetworkType == 3) return @"Wifi";
+	if(aNetworkType == 5) return @"Wifi";
 	
 	return nil;
 }
@@ -42,9 +66,10 @@
 + (Measure *)measureWithStatusBarData:(StatusBarData *)statusBarData location:(CLLocation *)aLocation {
 	
 	NSInteger gsmSignalStrengthRaw = statusBarData->gsmSignalStrengthRaw;
-	NSInteger dataNetworkType = statusBarData->dataNetworkType;
+	//NSInteger dataNetworkType = statusBarData->dataNetworkType; // always 0
+    NSUInteger dataNetworkType = [[self dataNetworkTypeFromStatusBar] integerValue];
 	char* serviceString = (char *)statusBarData->serviceString;
-	
+	    
 	NSString *aNetworkName = [NSString stringWithCString:serviceString encoding:NSUTF8StringEncoding];
 
 	Measure *m = [[Measure alloc] init];
