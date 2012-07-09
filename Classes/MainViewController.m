@@ -12,6 +12,7 @@
 #import <MapKit/MapKit.h>
 #import "MSPolylineWrapper.h"
 #import "UIColor+MS.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation MainViewController
 
@@ -171,6 +172,9 @@
 
 	mapView.showsUserLocation = YES;
 	
+    mapView.layer.borderColor = [UIColor blackColor].CGColor;
+    mapView.layer.borderWidth = 1.0f;
+    
 	chartView.backgroundColor = [UIColor clearColor];
 }
 
