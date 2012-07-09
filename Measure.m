@@ -66,9 +66,15 @@
 + (Measure *)measureWithStatusBarData:(StatusBarData *)statusBarData location:(CLLocation *)aLocation {
 	
 	NSInteger gsmSignalStrengthRaw = statusBarData->gsmSignalStrengthRaw;
-	//NSInteger dataNetworkType = statusBarData->dataNetworkType; // always 0
+    
+    //NSInteger dataNetworkType = statusBarData->dataNetworkType;
+    
+    // Since iOS 5, statusBarData->dataNetworkType returns always 0.
+    // Therefore, we read in the status bar view to get this value.
+    
     NSUInteger dataNetworkType = [[self dataNetworkTypeFromStatusBar] integerValue];
-	char* serviceString = (char *)statusBarData->serviceString;
+	
+    char* serviceString = (char *)statusBarData->serviceString;
 	    
 	NSString *aNetworkName = [NSString stringWithCString:serviceString encoding:NSUTF8StringEncoding];
 
