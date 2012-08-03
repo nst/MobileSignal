@@ -41,21 +41,6 @@ static NSDateFormatter *dateFormatter;
     return dateFormatter;
 }
 
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {    
-	[self dismissModalViewControllerAnimated:YES];
-}
-
-- (IBAction)showInfo:(id)sender {    
-	
-	FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
-	controller.delegate = self;
-	
-	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[self presentModalViewController:controller animated:YES];
-	
-	[controller release];
-}
-
 - (void)displayMeasure:(Measure *)m {
 	networkNameLabel.text = m.networkName;
 	signalStrengthLabel.text = [NSString stringWithFormat:@"%d dBm", m.signalStrength];
