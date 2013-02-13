@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034F2AFA16CBC194006B56F8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 034F2AF916CBC194006B56F8 /* Default-568h@2x.png */; };
 		035092BD129BA2B0007EBDAF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035092BC129BA2B0007EBDAF /* CoreLocation.framework */; };
 		035092F4129BA8D8007EBDAF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035092F3129BA8D8007EBDAF /* MapKit.framework */; };
 		037E6AE815AB305700833F6B /* UIApplication+MS.m in Sources */ = {isa = PBXBuildFile; fileRef = 037E6AE715AB305700833F6B /* UIApplication+MS.m */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0300AE901298675B00D87CEE /* UIStatusBarServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIStatusBarServer.h; sourceTree = "<group>"; };
+		034F2AF916CBC194006B56F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		035092BC129BA2B0007EBDAF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		035092F3129BA8D8007EBDAF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		037E6AE615AB305700833F6B /* UIApplication+MS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MS.h"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				034F2AF916CBC194006B56F8 /* Default-568h@2x.png */,
 				0300AE9A129867A300D87CEE /* UIKit+Private */,
 				03F4AAFA12926D6D000F5EED /* Measure.h */,
 				03F4AAFB12926D6D000F5EED /* Measure.m */,
@@ -223,6 +226,7 @@
 				280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */,
 				03C79B7612ABFE6A0081BD3A /* Icon.png in Resources */,
 				03C79B7712ABFE6A0081BD3A /* Icon@2x.png in Resources */,
+				034F2AFA16CBC194006B56F8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
