@@ -22,6 +22,7 @@
 	[UIApplication sharedApplication].idleTimerDisabled = YES;
 
     [window addSubview:mainViewController.view];
+    window.rootViewController = mainViewController;
     [window makeKeyAndVisible];
 
     return YES;
